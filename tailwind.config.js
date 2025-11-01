@@ -6,11 +6,24 @@ export default {
   ],
   theme: {
     extend: {
-      fontFamily: {
-        display: ['Crete Round', 'sans-serif'],
-        xo: ['Patrick Hand' ],
-      },
-    },
+                    colors: {
+                        "primary": "#13a4ec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101c22",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                    boxShadow: {
+                        'glow-primary': '0 0 20px 0px rgba(19, 164, 236, 0.4)',
+                    }
+                },
   },
   plugins: [],
 }

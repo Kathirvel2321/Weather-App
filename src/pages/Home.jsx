@@ -1,23 +1,21 @@
-import {React, useEffect} from "react";
+import React from "react";
+import Background from "../components/background";
 
 const Home = () => {
-  useEffect(() => {
-    const move = e => {
-      document.documentElement.style.setProperty("--x", e.clientX + "px");
-      document.documentElement.style.setProperty("--y", e.clientY + "px");
-    };
-    window.addEventListener("mousemove", move);
-    return () => window.removeEventListener("mousemove", move);
-  }, []);
   return (
-    <div>
-      <div className="home-page  h-screen w-screen">
-        <div className="dots w-full h-full flex justify-center items-center gap-5 flex-col">
-        <h1 className="text-5xl font-bold text-white">Weatherly</h1>
-        <p className="text-white/50 text-">
+    <>
+      <Background />
+
+      <div className="home-page flex justify-center items-center md:gap-5 gap-1 flex-col h-screen overflow-hidden">
+        <h1 className="md:text-5xl text-3xl font-bold text-white">Weatherly</h1>
+
+        <p className="text-white/50 text-xs md:text-lg">
           Get real time weather updates with an immersive experience
         </p>
-        <div style={{ position: "relative", maxWidth: 420, width: "100%" }}>
+
+        <div className="flex items-center justify-center mt-5 md:mt-0"
+             style={{ position: "relative"}}>
+
           <svg
             aria-hidden="true"
             focusable="false"
@@ -33,29 +31,17 @@ const Home = () => {
               pointerEvents: "none",
             }}
           >
-            <path
-              d="M21 21l-4.35-4.35"
-              stroke="currentColor"
-              strokeWidth="2"
-              fill="none"
-              strokeLinecap="round"
-            />
-            <circle
-              cx="11"
-              cy="11"
-              r="6"
-              stroke="currentColor"
-              strokeWidth="2"
-              fill="none"
-            />
+            <path d="M21 21l-4.35-4.35" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round"/>
+            <circle cx="11" cy="11" r="6" stroke="currentColor" strokeWidth="2" fill="none"/>
           </svg>
+
           <input
             type="text"
-            className="input-field bg-transparent border rounded-full px-32 py-2  inset-0 text-white animate-pulse"/>
+            className="input-field bg-transparent border rounded-full md:px-32 md:py-2 px-16 py-1 inset-0 text-white animate-pulse"
+          />
         </div>
       </div>
-    </div>
-    </div>
+    </>
   );
 };
 
