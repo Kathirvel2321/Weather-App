@@ -7,43 +7,39 @@
   background-color: #101c22;
 
   background-image:
-    radial-gradient(circle at 5% 20%, rgba(0, 198, 255, 0.15) 0%, transparent 30%),
-    radial-gradient(circle at 100% 30%, rgba(62, 141, 226, 0.2) 0%, transparent 20%),
-    radial-gradient(circle at 80% 90%, rgba(108, 21, 230, 0.15) 0%, transparent 30%);
+    radial-gradient(circle at 5% 20%, rgba(0, 198, 255, 0.15) 10%, transparent 30%),
+    radial-gradient(circle at 100% 30%, rgba(62, 141, 226, 0.2) 10%, transparent 20%),
+    radial-gradient(circle at 80% 90%, rgba(108, 21, 230, 0.15) 10%, transparent 30%);
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 100vh;
-  
+ 
 }
+
 
 .input-field{
   box-shadow: 0 0 10px rgba(0, 198, 255, 0.9);
 }
-.dots {
-  width: 100vw;
-  height: 100vh;
-  background: #0b0b0b;
-  position: relative;
 
-  /* dotted grid pattern */
-  background-image: radial-gradient(#333 2px, transparent 2px);
-  background-size: 20px 20px;
+.boxes{
+ @apply h-full w-40 border border-white/10 bg-white/5 rounded-2xl hover:bg-primary/30 hover:border-primary/60 hover:-translate-y-1 hover:shadow-glow-primary 
+ flex flex-col justify-center items-center gap-4 text-white flex-wrap
+}
+.boxes:hover{
+  box-shadow: 0 0 20px 0px rgba(19, 164, 236, 0.4);
+  
+}
+.week{
+  @apply font-semibold text-xl text-white/70 
 }
 
-/* glowing light that follows mouse */
-.dots::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
+.degree{
+  @apply font-bold text-lg flex pt-3
+}
+.deg{
+  @apply -mt-5 text-sm text-white/40
+}
 
-  background-image: radial-gradient(
-    circle at var(--x, 50%) var(--y, 50%),
-    rgba(255,255,255,1) 0px,
-    rgba(255,255,255,0.7) 60px,
-    rgba(255,255,255,0.2) 120px,
-    rgba(255,255,255,0) 200px
-  );
-
-  mix-blend-mode: lighten;
+.chartboard{
+  @apply relative h-full w-[82%] border rounded border-white/10 bg-white/5 px-10 py-5 
 }
