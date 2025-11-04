@@ -1,5 +1,5 @@
 import { React, useState } from "react";
-import Background from "../components/background";
+import Background from "../components/Background";
 import { useNavigate } from "react-router-dom";
 const Home = () => {
   const navigate = useNavigate();
