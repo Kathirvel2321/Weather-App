@@ -20,26 +20,83 @@
 .input-field{
   box-shadow: 0 0 10px rgba(0, 198, 255, 0.9);
 }
+.input-field1{
+  box-shadow: 0 0 7px rgba(0, 198, 255, 0.9);
+}
+
 
 .boxes{
- @apply h-full w-40 border border-white/10 bg-white/5 rounded-2xl hover:bg-primary/30 hover:border-primary/60 hover:-translate-y-1 hover:shadow-glow-primary 
- flex flex-col justify-center items-center gap-4 text-white flex-wrap
+ @apply md:h-full h-[70%]  md:w-40 border border-white/10 bg-white/5 rounded-2xl hover:bg-primary/30 hover:border-primary/60 hover:-translate-y-1 hover:shadow-glow-primary 
+ flex flex-col justify-center items-center gap-3 text-white flex-wrap 
 }
 .boxes:hover{
   box-shadow: 0 0 20px 0px rgba(19, 164, 236, 0.4);
   
 }
+
+.today-active {
+  /* Tailwind hover effects applied permanently */
+  @apply bg-primary/30 border-primary/60 -translate-y-1 shadow-glow-primary;
+
+  /* Your custom shadow also applied permanently */
+  box-shadow: 0 0 20px 0px rgba(19, 164, 236, 0.4);
+}
+
+
+
 .week{
-  @apply font-semibold text-xl text-white/70 
+  @apply font-semibold md:text-xl text-white/70 
 }
 
 .degree{
-  @apply font-bold text-lg flex pt-3
+  @apply font-bold md:text-lg flex 
 }
 .deg{
-  @apply -mt-5 text-sm text-white/40
+  @apply -mt-4 md:text-sm text-white/40
 }
 
 .chartboard{
   @apply relative h-full w-[82%] border rounded border-white/10 bg-white/5 px-10 py-5 
 }
+
+.iconrain{
+  filter: drop-shadow(0 0 4px rgba(19,164,236,1));
+}
+
+.iconcloud{
+  filter: drop-shadow(0 0 4px rgb(255, 255, 255));
+}
+.iconsunny{
+  filter: drop-shadow(0 0 4px rgb(229, 227, 94));
+}
+.iconthunder{
+  filter: drop-shadow(0 0 4px rgba(128,0,128,1));
+}
+.iconsnow{
+  filter: drop-shadow(0 0 4px rgba(255, 255, 255, 1));
+}  
+.iconfog{
+  filter: drop-shadow(0 0 4px rgba(192,192,192,1));
+}
+.iconwindy{   
+  filter: drop-shadow(0 0 4px rgba(0,255,0,1));
+}
+.iconhot{
+  filter: drop-shadow(0 0 4px rgba(255,0,0  ,1));
+}
+.iconsleet{
+  filter: drop-shadow(0 0 4px rgba(173,216,230,1));
+}
+.iconshowers{
+  filter: drop-shadow(0 0 4px rgba(30,144,255,1));
+}
+.iconlightning{
+  filter: drop-shadow(0 0 4px rgba(255,215,0,1));
+}   
+
+.chart-glow path {
+  filter: drop-shadow(0px 0px 8px rgba(0, 200, 255, 0.8))
+          drop-shadow(0px 30px 15px rgba(0, 200, 255, 5));
+}
+
+
