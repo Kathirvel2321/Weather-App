@@ -1,7 +1,7 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import Searchbtn from "../components/searchbtn";
+import Searchbtn from "../components/Searchbtn";
 import {
   WiDaySunny,
   WiNightClear,
