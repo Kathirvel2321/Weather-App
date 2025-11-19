@@ -19,7 +19,7 @@ const Home = () => {
 
     try {
       const res = await fetch(
-        `https://api.weatherapi.com/v1/search.json?key=7beab58f6be64b40adf114737250111&q=${value}`
+        `https://api.weatherapi.com/v1/search.json?key=0176994ea7f34070bbe70115251911&q=${value}`
       );
       const data = await res.json();
 
