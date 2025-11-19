@@ -43,7 +43,7 @@ const Weather = () => {
     }
   }, [cityparam]);
 
-  const API_KEY = "7beab58f6be64b40adf114737250111";
+  const API_KEY = "0176994ea7f34070bbe70115251911";
   const [data, setdata] = useState(null);
 
   useEffect(() => {
